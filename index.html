@@ -71,6 +71,73 @@
     </div>
   </div>
 
+  <div id="reservationModal" class="modal fade" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Reserve a Table</h3>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group row">
+              <label class="col-sm-2"for="radiogroup">Number of Guests</label>
+            <div class="col-sm-10 pull-right" id="radiogroup">
+              <label class="radio-inline"><input type="radio" name="optradio1">1<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+              <label class="radio-inline"><input type="radio" name="optradio1">2<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+              <label class="radio-inline"><input type="radio" name="optradio1">3<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+              <label class="radio-inline"><input type="radio" name="optradio1">4<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+              <label class="radio-inline"><input type="radio" name="optradio1">5<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+              <label class="radio-inline"><input type="radio" name="optradio1">6<span class="hidden-xs-down">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="smoking">Section</label>
+            <div class="col-sm-10" id="smoking">
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="option1" autocomplete="off"> Non-Smoking
+                </label>
+                <label class="btn btn-danger">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                </label>
+              </div>
+            </div>
+          </div>
+            <div class="form-group row">
+              <form class="form-inline">
+                <label for="date-input1" class="col-sm-2 col-form-label">Date and Time</label>
+                <div class="col-sm-5 mt-2">
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                    <input class="form-control" type="text" placeholder="Date" id="date-input">
+                  </div>
+                </div>
+                <div class="col-sm-5 mt-2">
+                  <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                    <input class="form-control" type="text" placeholder="Time" id="date-input">
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10 offset-2">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" name="Cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary" name="Reserve" >Reserve</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <header class="jumbotron">
     <div class="container">
       <div class="row row-header">
@@ -82,14 +149,7 @@
           <img src="img/logo.png" class="img-fluid col col-md" alt="">
         </div>
         <div class="col-sm-3 col-xs-6 align-self-center">
-          <a href="#reservation"
-             class="btn btn-block bg-warning text-white"
-             data-toggle="tooltip"
-             data-html="true"
-             title="Or Call Us at<br><strong></strong>+852 12345678</strong>"
-             data-placement="bottom">
-              Reserve Table
-         </a>
+          <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#reservationModal" name="button">Reserve Table</button>
         </div>
       </div>
     </div>
@@ -119,20 +179,20 @@
                   <h2>Alberto Somayya</h2>
                   <h4>Executive Chef</h4>
                   <p class="hidden-xs-down">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                </div>
               </div>
-              </div>
-              <ol class="carousel-indicators">
-                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#mycarousel" data-slide-to="1"></li>
-                <li data-target="#mycarousel" data-slide-to="2"></li>
-              </ol>
-              <a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </a>
-              <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </a>
             </div>
+            <ol class="carousel-indicators">
+              <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#mycarousel" data-slide-to="1"></li>
+              <li data-target="#mycarousel" data-slide-to="2"></li>
+            </ol>
+            <a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
         </div>
       </div>
