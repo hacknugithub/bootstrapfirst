@@ -193,14 +193,12 @@
             <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
-            <div class="btn-group" id="carouselButtons">
-              <button  class="btn btn-default btn-sm" id="carousel-pause">
+
+              <button  class="btn btn-default btn-sm" id="carousel-button">
                 <span class="fa fa-pause"></span>
               </button>
-              <button  class="btn btn-success btn-sm" id="carousel-play">
-                <span class="fa fa-play"></span>
-              </button>
-            </div>
+
+
           </div>
         </div>
       </div>
@@ -305,11 +303,22 @@
         $(document).ready(function(){
           // $('[data-toggle="tooltip"]').tooltip();
           $("#mycarousel").carousel( { interval: 4000 } );
-          $("#carousel-pause").click(function(){
-            $("#mycarousel").carousel('pause');
-          });
-          $("#carousel-play").click(function(){
-            $("#mycarousel").carousel('cycle');
+
+          $("#carousel-button").click(function(){
+            if($("#carousel-button").children("span").hasClass("fa-pause")){
+              $("#mycarousel").carousel('pause');
+              $("#carousel-button").children("span").removeClass("fa-pause");
+              $("#carousel-button").removeClass("btn-default");
+              $("#carousel-button").children("span").addClass("fa-play");
+              $("#carousel-button").addClass("btn-success");
+            } else{
+              $("#mycarousel").carousel('cycle');
+              $("#carousel-button").children("span").removeClass("fa-play");
+              $("#carousel-button").removeClass("btn-success");
+              $("#carousel-button").children("span").addClass("fa-pause");
+              $("#carousel-button").addClass("btn-default");
+            }
+
           });
         });
 
