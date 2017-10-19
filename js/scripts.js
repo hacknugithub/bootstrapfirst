@@ -1,4 +1,4 @@
-<script>
+
   $(document).ready(function(){
     // $('[data-toggle="tooltip"]').tooltip();
     $("#mycarousel").carousel( { interval: 4000 } );
@@ -20,5 +20,3 @@
 
     });
   });
-
-</script>
