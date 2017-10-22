@@ -20,3 +20,23 @@
 
     });
   });
+function initMap(){
+
+    var location = new google.maps.LatLng(	19.432608, 	-99.133209);
+
+    var mapCanvas = document.getElementById('map');
+    var mapOptions = {
+      center: location,
+      zoom: 16,
+      panControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+            position: location,
+            map: map
+            // icon: markerImage
+        });
+
+        google.maps.event.addDomListener(window, 'load', initMap);
+};
