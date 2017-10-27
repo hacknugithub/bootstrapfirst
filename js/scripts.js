@@ -17,7 +17,14 @@
         $("#carousel-button").children("span").addClass("fa-pause");
         $("#carousel-button").addClass("btn-default");
       }
+    });
 
+    $("#loginModTrig").click(function(){
+      $("#loginModal").modal();
+    });
+
+    $("#resModTrig").click(function(){
+      $("#reservationModal").modal();
     });
   });
 function initMap(){

@@ -31,7 +31,7 @@
           <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a id="loginModTrig">
             <span class="fa fa-sign-in"> Login</span>
           </a>
         </span>
@@ -39,7 +39,7 @@
     </div>
   </nav>
 
-  <div id="loginModal"class="modal fade" role="dialog">
+  <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog" role="content">
       <div class="modal-content">
         <div class="modal-header">
@@ -125,16 +125,16 @@
                 </div>
 
               </form>
-
             </div>
-            <div class="form-group row">
-              <div class="col-sm-10 offset-2">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" name="Cancel">Cancel</button>
-                <button type="submit" class="btn btn-primary" name="Reserve" >Reserve</button>
-              </div>
+            </div>
+            <div class="modal-footer">
+                <div class="close">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" name="Cancel">Cancel</button>
+                  <button type="submit" class="btn btn-primary" name="Reserve" >Reserve</button>
+                </div>
             </div>
           </form>
-        </div>
+
       </div>
 
     </div>
@@ -151,7 +151,7 @@
           <img src="img/logo.png" class="img-fluid col col-md" alt="">
         </div>
         <div class="col-sm-3 col-xs-6 align-self-center">
-          <button type="button" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#reservationModal" name="button">Reserve Table</button>
+          <button id="resModTrig" type="button" class="btn btn-lg btn-warning" name="button">Reserve Table</button>
         </div>
       </div>
     </div>
