@@ -22,12 +22,12 @@
   });
 function initMap(){
 
-    var location = new google.maps.LatLng(	19.432608, 	-99.133209);
+    var location = new google.maps.LatLng(	22.334204, 	114.217638);
 
     var mapCanvas = document.getElementById('map');
     var mapOptions = {
       center: location,
-      zoom: 16,
+      zoom: 15,
       panControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
